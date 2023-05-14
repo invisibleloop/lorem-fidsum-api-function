@@ -253,9 +253,19 @@ const generateLoremFidsum = (phrases, count) => {
   return paragraph;
 };
 
+const generateFidlarText = (text) => {
+  let formattedText = "";
+  text.forEach((para) => {
+    formattedText += `${para.p}\n\n`;
+  });
+  return formattedText;
+};
+
 exports.handler = async function (event, context) {
   return {
     statusCode: 200,
-    body: JSON.stringify({ message: generateLoremFidsum(fidlerPhrases, 3) }),
+    body: JSON.stringify({
+      message: generateFidlarText(generateLoremFidsum(fidlerPhrases, 3)),
+    }),
   };
 };
