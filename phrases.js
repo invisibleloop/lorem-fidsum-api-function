@@ -1,4 +1,4 @@
-export const fidlerPhrases = [
+module.exports.fidlerPhrases = [
   "",
   "It's not a great start to the day lemme tell ya.",
   "Aw man.",
