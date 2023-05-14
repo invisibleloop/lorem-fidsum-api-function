@@ -264,6 +264,11 @@ const generateFidlarText = (text) => {
 exports.handler = async function (event, context) {
   return {
     statusCode: 200,
+    headers: {
+      "Access-Control-Allow-Origin": "*", // Allow any origin to access the resource
+      "Access-Control-Allow-Methods": "GET", // Allow only GET requests
+      "Content-Type": "application/json", // The MIME type of the response
+    },
     body: JSON.stringify({
       message: generateFidlarText(generateLoremFidsum(fidlerPhrases, 3)),
     }),
