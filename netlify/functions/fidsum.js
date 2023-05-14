@@ -262,6 +262,7 @@ const generateFidlarText = (text) => {
 };
 
 exports.handler = async function (event, context) {
+  const paragraphs = event.queryStringParameters.paragraphs;
   return {
     statusCode: 200,
     headers: {
@@ -270,7 +271,9 @@ exports.handler = async function (event, context) {
       "Content-Type": "application/json", // The MIME type of the response
     },
     body: JSON.stringify({
-      message: generateFidlarText(generateLoremFidsum(fidlerPhrases, 3)),
+      message: generateFidlarText(
+        generateLoremFidsum(fidlerPhrases, paragraphs)
+      ),
     }),
   };
 };
