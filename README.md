@@ -1,2 +1,2 @@
 # lorem-fidsum-api-function
-Lorm fidsum text generator api
+Lorem fidsum text generator api
