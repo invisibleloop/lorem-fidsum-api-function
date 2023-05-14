@@ -1,4 +1,4 @@
-const fidlerPhrases = require("../../phrases");
+const { fidlerPhrases } = require("../../phrases");
 
 /**
  * How many words are there in the string?
